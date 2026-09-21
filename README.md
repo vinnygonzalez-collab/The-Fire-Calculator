@@ -7,7 +7,7 @@ function calculateFIRE() {
     const annualContribution = parseFloat(document.getElementById('annual-contribution').value);
     const expectedReturnRate = parseFloat(document.getElementById('return-rate').value);
     const resultDiv = document.getElementById('result');
-
+    
     const targetNumber = annualExpenses * 25;
     let total = currentSavings;
     let years = 0;
