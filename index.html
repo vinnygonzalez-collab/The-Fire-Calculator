@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRE Financial Freedom Calculator</title>
+    <link rel="icon" type="image" href="images/calculator.webp">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="intro">
+            <p class="eyebrow">Financial independence planning</p>
+            <h1>The FIRE Calculator</h1>
+            <p class="description">See how your savings, contributions, and investment returns work together.</p>
+        </div>
+        <form id="fire-form">
+            <div class="input-grid">
+                <label for="current-savings">Current savings <span>$</span>
+                    <input type="number" id="current-savings" value="10000" min="0" step="1000" required>
+                </label>
+                <label for="annual-expenses">Annual expenses <span>$</span>
+                    <input type="number" id="annual-expenses" value="40000" min="1" step="1000" required>
+                </label>
+                <label for="annual-contribution">Annual contribution <span>$</span>
+                    <input type="number" id="annual-contribution" value="15000" min="0" step="1000" required>
+                </label>
+                <label for="return-rate">Expected return <span>%</span>
+                    <input type="number" id="return-rate" value="7" min="-99" max="100" step="0.1" required>
+                </label>
+            </div>
+            <button type="submit">Calculate my timeline<span aria-hidden="true">→</span></button>
+        </form>
+        <div id="result" aria-live="polite"></div>
+        <p class="assumption">Uses the 25× rule: annual expenses multiplied by 25.</p>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
